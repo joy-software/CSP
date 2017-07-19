@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorBienvenue" prefHeight="336.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.BienvenueController">
+   <children>
+      <Label fx:id="photo" layoutX="113.0" layoutY="67.0" prefHeight="184.0" prefWidth="251.0" text="Label" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="252.0" prefHeight="38.0" prefWidth="386.0" text="Cliquer sur suivant pour entrer vos données" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="28.0" prefHeight="38.0" prefWidth="386.0" text="Bienvenue dans notre CSP Resolver " textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

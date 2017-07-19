@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="336.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.BienvenueController">
+   <children>
+      <AnchorPane fx:id="contraintes_anchor" disable="true" layoutX="33.0" layoutY="168.0">
+         <children>
+            <HBox spacing="50.0">
+               <children>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" text="2.">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="contraintes_text" alignment="CENTER" layoutX="14.0" layoutY="29.0" onMouseClicked="#contraintes_getMnemonic" prefHeight="25.0" prefWidth="214.0" promptText="Entrer une contrainte" />
+                  <Button fx:id="contraintes_button" layoutX="265.0" layoutY="29.0" mnemonicParsing="false" onAction="#contraintes_add" text="Ajouter" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="contraintes_table" layoutX="82.0" layoutY="28.0" onMouseClicked="#updateConstrainte" prefHeight="138.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="contraintes_cont" prefWidth="75.0" text="Contraintes" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TextArea editable="false" layoutX="27.0" layoutY="44.0" onMouseClicked="#contraintes_activeAnchor" onMouseExited="#contraintes_activeAnchor" onScrollStarted="#contraintes_activeAnchor" prefHeight="118.0" prefWidth="413.0" promptText="mmsdf" text="                Notons ici que vos variables sont notées de a vers z   &#10; C'est à dire la première variable pour a la seconde pour b et ainsi de suite           &#10;                             egale se note ==  [ex: a == b (a egale à b) ]                     &#10;                         different se note !=   [ex: a != b (a different de b)]                &#10;                                superieur ou égale se note &gt;= &#10;                                       superieur se note &gt; &#10;                                inferieur ou égale se note &lt;=&#10;                                        inferieur  se note &lt;&#10;                                       +  pour addition&#10;                                  - pour la soustraction&#10;                                        / pour la division&#10;                                     * pour multiplication&#10;          ex: a + b &lt;= c (a plus b inférieur ou égal à la troisième variable c) " />
+      <HBox layoutX="27.0" layoutY="14.0" spacing="20.0">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" text="1.">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Button>
+            <Label text="Lisez attentivement tout ce texte afin d'inserer vos contraintes">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <InnerShadow color="#8f9ab2" />
+   </effect>
+</AnchorPane>

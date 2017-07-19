@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorResultat" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.BienvenueController">
+   <children>
+      <HBox layoutX="27.0" layoutY="14.0" spacing="20.0">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" text="1.">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Button>
+            <Label text="Execution  de l'algorithme">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="resultat_anchor" disable="true" layoutX="27.0" layoutY="113.0" prefHeight="210.0" prefWidth="307.0">
+         <children>
+            <ListView fx:id="resultat_listview" layoutX="36.0" layoutY="47.0" prefHeight="103.0" prefWidth="200.0" />
+            <HBox spacing="20.0">
+               <children>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" text="2.">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label text="Resultat">
+                     <font>
+                        <Font name="Berlin Sans FB Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <GridPane layoutX="36.0" layoutY="139.0" prefHeight="47.0" prefWidth="271.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <CheckBox fx:id="resultat_graphe" mnemonicParsing="false" onMouseClicked="#showGraphe" prefHeight="17.0" prefWidth="271.0" text="Voulez-vous afficher le graphe de résolution?" />
+               </children>
+            </GridPane>
+            <Label fx:id="resultat_vide" layoutX="39.0" layoutY="25.0" text="Aucune solution ne satisfait les contraintes" textFill="#c94f4f" visible="false">
+               <font>
+                  <Font name="Bernard MT Condensed" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="resultat_photo" layoutX="299.0" layoutY="84.0" prefHeight="146.0" prefWidth="134.0" text="Label" />
+      <AnchorPane layoutX="48.0" layoutY="46.0" prefHeight="24.0" prefWidth="375.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="6.0" spacing="50.0">
+               <children>
+                  <Label fx:id="resultat_label" layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="134.0" text="Execution en cours ..." textFill="#a12e2e">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <InnerShadow color="#8f9ab2" />
+   </effect>
+</AnchorPane>
